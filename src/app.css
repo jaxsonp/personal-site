@@ -9,7 +9,7 @@ h1 {
 	font-size: xx-large;
 }
 
-.main-panel {
+.content {
 	background: rgba(0, 0, 0, 0.75);
 	backdrop-filter: blur(4px);
 }

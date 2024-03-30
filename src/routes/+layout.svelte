@@ -33,12 +33,10 @@
 
 <div>
 	<canvas class="background" id="background"></canvas>
-	<!-- <header class="alert">
+	<header class="alert">
 		<p>🚧 This page is currently a work on progress 🚧</p>
-	</header> -->
-	<div class="content">
-		<slot />
-	</div>
+	</header>
+	<slot />
 	<footer class="page-footer">
 		<p>Placeholder footer</p>
 	</footer>
@@ -51,12 +49,6 @@
 		z-index: -1;
 		top: 0;
 		left: 0;
-	}
-
-	.content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 
 	.page-footer {
