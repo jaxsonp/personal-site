@@ -6,7 +6,7 @@
 
 	if (browser) {
 		window.onload = () => {
-			console.debug('Window loaded');
+			console.log('Window loaded');
 			let backgroundCanvas = document.getElementById('background') as HTMLCanvasElement;
 			if (backgroundCanvas != null) {
 				function resizeBackground() {

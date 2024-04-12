@@ -3,13 +3,47 @@ body {
 	padding: 0;
 
 	color: #fff3e9;
+	font-family: 'Lato', sans-serif;
+}
+
+#content {
+	background: rgba(0, 0, 0, 0.75);
+	backdrop-filter: blur(4px);
 }
 
 h1 {
-	font-size: xx-large;
+	margin: 0;
+	font-size: 8rem;
 }
 
-.content {
-	background: rgba(0, 0, 0, 0.75);
-	backdrop-filter: blur(4px);
+h2 {
+	margin: 0;
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 3rem;
+}
+
+h4 {
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+p {
+	margin: 1rem, 0;
+}
+
+hr {
+	color: #777;
+	width: 80%;
+}
+
+button {
+	margin: 1rem;
+	padding: 0.5rem;
+}
+
+img {
+	box-shadow: 0.5rem 0.5rem dodgerblue;
 }
