@@ -1,7 +1,13 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 
 	import HeadshotPic from '$lib/assets/headshot.jpg';
+
+	function gotoResume() {
+		goto('/resume.pdf');
+	}
 </script>
 
 <div id="page">
@@ -22,9 +28,21 @@
 		</h4>
 		<!-- Contact links -->
 		<div id="contact-buttons">
-			<button>Resume</button>
-			<button>Github</button>
-			<button>Contact me</button>
+			<button
+				on:click={() => {
+					goto('/resume.pdf');
+				}}>Resume</button
+			>
+			<button
+				on:click={() => {
+					goto('/github');
+				}}>Github</button
+			>
+			<button
+				on:click={() => {
+					goto('/linkedin');
+				}}>Linkedin</button
+			>
 		</div>
 		<hr />
 		<SectionTitle>About Me</SectionTitle>
