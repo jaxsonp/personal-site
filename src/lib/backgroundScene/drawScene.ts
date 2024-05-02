@@ -1,5 +1,10 @@
+import Bird from './bird';
+
 let ctx: CanvasRenderingContext2D;
 let width: number, height: number;
+
+let skyGradient: CanvasGradient, oceanGradient: CanvasGradient;
+let bird: Bird;
 
 export const initializeScene = () => {
 	console.debug('Initializing background scene');
@@ -17,22 +22,26 @@ export const configureScene = (canvas: HTMLCanvasElement) => {
 	ctx = new_ctx;
 
 	// sky gradient
-	let skyGradient = ctx.createLinearGradient(0, 0, 0, height / 2);
+	skyGradient = ctx.createLinearGradient(0, 0, 0, height / 2);
 	skyGradient.addColorStop(0.0, '#0E89DB');
 	skyGradient.addColorStop(1.0, '#9ACDE7');
 	ctx.fillStyle = skyGradient;
 	ctx.fillRect(0, 0, width, height / 2);
 
 	// ocean gradient
-	let oceanGradient = ctx.createLinearGradient(0, height / 2, 0, height);
+	oceanGradient = ctx.createLinearGradient(0, height / 2, 0, height);
 	oceanGradient.addColorStop(0.1, '#0097AE');
-	oceanGradient.addColorStop(1.0, '#056198');
+	oceanGradient.addColorStop(0.3, '#056198');
 	ctx.fillStyle = oceanGradient;
 	ctx.fillRect(0, height / 2, width, height / 2);
 };
 
 export const drawScene = () => {
-	//console.debug('Drawing scene');
+	console.debug('Drawing scene');
+	if (bird == undefined || bird.x > width) {
+		bird = new Bird(Math.random() * 200);
+	}
+	bird.moveAndDraw(ctx, skyGradient);
 	/*ctx.fillStyle = 'lightblue';
 	ctx.fillRect(0, 0, width, height);
 
