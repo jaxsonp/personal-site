@@ -22,10 +22,12 @@
 			</div>
 			<img id="headshot" src={HeadshotPic} alt="Jaxson's headshot" />
 		</div>
-		<h4 style="text-align: center; padding: 0 10vw;">
-			I'm a computer science student at Purdue University with a passion for creating and
-			problem-solving.
-		</h4>
+		<div style="display: flex; justify-content: center;">
+			<h4 style="text-align: center; width: 75%">
+				I'm a computer science student at Purdue University with a passion for creating and
+				problem-solving. Welcome to my website!
+			</h4>
+		</div>
 		<!-- Contact links -->
 		<div id="contact-buttons">
 			<button
@@ -77,8 +79,10 @@
 		object-fit: cover;
 	}
 	#contact-buttons {
-		margin: 2rem 0;
 		display: flex;
 		justify-content: center;
+	}
+	#contact-buttons > button {
+		margin: 2rem 0.5rem;
 	}
 </style>

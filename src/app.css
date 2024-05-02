@@ -41,9 +41,13 @@ hr {
 
 button {
 	margin: 1rem;
-	padding: 0.5rem;
+	padding: 1rem 0.5rem;
+	border-radius: 12px;
+	/* box-shadow: 4px 4px dodgerblue; */
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 img {
-	box-shadow: 0.5rem 0.5rem dodgerblue;
+	box-shadow: 8px 8px dodgerblue;
 }
