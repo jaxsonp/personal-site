@@ -1,0 +1,17 @@
+{
+	"featured": [
+		{
+			"title": "CHIP-8 Emulator",
+			"link": "https://github.com/jaxsonp/CHIP-8",
+			"description": "A basic CHIP-8 interpreter written in rust, attempting to emulate the original COSMAC VIP interpreter. I also wrote a very elementary assembler in python, which I used to create test ROMs.",
+			"imagePath": "chip-8.png"
+		},
+		{
+			"title": "Docker Dash",
+			"link": "https://github.com/jaxsonp/docker-dash",
+			"description": "Docker Dash is a handy GUI dashboard made for administrators to manage users' apps running as docker containers on a server. This is a project I worked on while interning at the Applied Research Laboratory at Univeristy of Hawai'i",
+			"imagePath": "docker-dash.jpeg"
+		}
+	],
+	"other": []
+}

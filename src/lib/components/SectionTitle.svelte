@@ -9,4 +9,7 @@
 		display: flex;
 		justify-content: center;
 	}
+	h2 {
+		margin: 2rem;
+	}
 </style>

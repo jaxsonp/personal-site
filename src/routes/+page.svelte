@@ -2,16 +2,16 @@
 	import { goto } from '$app/navigation';
 
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
+	import LargeProject from '$lib/components/LargeProject.svelte';
 
-	import HeadshotPic from '$lib/assets/headshot.jpg';
+	import HeadshotPic from '$lib/images/headshot.jpg';
 
-	function gotoResume() {
-		goto('/resume.pdf');
-	}
+	import projects from '../projects.json';
+	let featuredProjects = projects['featured'];
 </script>
 
 <div id="page">
-	<div id="content">
+	<div class="content">
 		<!-- Intro section -->
 		<div style="display: flex; justify-content: space-between;">
 			<div style="flex-grow: 1">
@@ -23,10 +23,10 @@
 			<img id="headshot" src={HeadshotPic} alt="Jaxson's headshot" />
 		</div>
 		<div style="display: flex; justify-content: center;">
-			<h4 style="text-align: center; width: 75%">
+			<p style="font-size: 2rem; margin: 0 10%;">
 				I'm a computer science student at Purdue University with a passion for creating and
 				problem-solving. Welcome to my website!
-			</h4>
+			</p>
 		</div>
 		<!-- Contact links -->
 		<div id="contact-buttons">
@@ -34,8 +34,19 @@
 			<a href="./github"><button>Github</button></a>
 			<a href="./linkedin"><button>Linkedin</button></a>
 		</div>
+
 		<hr />
-		<SectionTitle>About Me</SectionTitle>
+		<SectionTitle>Featured Projects</SectionTitle>
+		<div style="display: flex; justify-content: center;">
+			<div style="width: 80%;">
+				{#each featuredProjects as { title, link, description, imagePath }}
+					<LargeProject {title} {description} {link} {imagePath} />
+				{/each}
+			</div>
+		</div>
+
+		<hr />
+		<SectionTitle>All Projects</SectionTitle>
 	</div>
 </div>
 
@@ -46,7 +57,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	#content {
+	.content {
 		width: 1000px;
 		max-width: 100vw;
 		min-height: calc(100vh - 4rem);
@@ -65,12 +76,10 @@
 		border-radius: 2px;
 		margin: 2rem;
 		object-fit: cover;
+		box-shadow: 8px 8px dodgerblue;
 	}
 	#contact-buttons {
 		display: flex;
 		justify-content: center;
-	}
-	#contact-buttons > button {
-		margin: 2rem 0.5rem;
 	}
 </style>
