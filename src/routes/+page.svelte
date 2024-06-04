@@ -30,21 +30,9 @@
 		</div>
 		<!-- Contact links -->
 		<div id="contact-buttons">
-			<button
-				on:click={() => {
-					goto('/resume.pdf');
-				}}>Resume</button
-			>
-			<button
-				on:click={() => {
-					goto('/github');
-				}}>Github</button
-			>
-			<button
-				on:click={() => {
-					goto('/linkedin');
-				}}>Linkedin</button
-			>
+			<a href="./resume.pdf"><button>Resume</button></a>
+			<a href="./github"><button>Github</button></a>
+			<a href="./linkedin"><button>Linkedin</button></a>
 		</div>
 		<hr />
 		<SectionTitle>About Me</SectionTitle>
