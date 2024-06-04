@@ -1,32 +1,37 @@
-<script lang="ts">
+<script lang="js">
 	import { browser } from '$app/environment';
 
 	import '../app.css';
-	import { initializeScene, configureScene, drawScene } from '$lib/backgroundScene/drawScene';
+	import { initializeScene, updateCanvas, drawScene } from '$lib/backgroundScene/drawScene';
 
 	if (browser) {
 		window.onload = () => {
 			console.log('Window loaded');
-			let backgroundCanvas = document.getElementById('background') as HTMLCanvasElement;
-			if (backgroundCanvas != null) {
-				function resizeBackground() {
-					backgroundCanvas.width = window.innerWidth;
-					backgroundCanvas.height = window.innerHeight;
-					configureScene(backgroundCanvas);
-				}
-				window.addEventListener('resize', resizeBackground, false);
-				resizeBackground();
+			let canvas = document.getElementById('background');
+			const resizeBackground = () => {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+				updateCanvas(canvas);
+			};
+			const getScrollPercent = () => {
+				var h = document.documentElement,
+					b = document.body,
+					st = 'scrollTop',
+					sh = 'scrollHeight';
+				return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+			};
+			window.addEventListener('resize', resizeBackground, false);
 
-				// initializing
-				initializeScene();
+			// initializing
+			initializeScene();
+			resizeBackground();
 
-				// loop for drawing background scene
-				const drawLoop = () => {
-					drawScene();
-					window.requestAnimationFrame(drawLoop);
-				};
+			// loop for drawing background scene
+			const drawLoop = () => {
+				drawScene();
 				window.requestAnimationFrame(drawLoop);
-			}
+			};
+			window.requestAnimationFrame(drawLoop);
 		};
 	}
 </script>
