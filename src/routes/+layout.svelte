@@ -1,4 +1,7 @@
 <script lang="js">
+	// for static generation
+	export const prerender = true;
+
 	import { browser } from '$app/environment';
 
 	import '../app.css';
