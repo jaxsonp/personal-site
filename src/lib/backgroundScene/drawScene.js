@@ -4,7 +4,6 @@ let ctx;
 let width, height;
 
 let skyGradient, oceanGradient;
-let bird;
 
 export function initializeScene() {
 	console.debug('Initializing background scene');
@@ -38,8 +37,4 @@ export function updateCanvas(canvas) {
 
 export const drawScene = () => {
 	console.debug('Drawing scene');
-	/*if (bird == undefined || bird.x > width) {
-		bird = new Bird(Math.random() * 200);
-	}
-	bird.moveAndDraw(ctx, skyGradient);*/
 };
