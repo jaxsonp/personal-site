@@ -13,7 +13,9 @@
 
 		<p id="description">{description}</p>
 	</div>
-	<img alt={imagePath} src="/src/lib/images/projects/{imagePath}" />
+	<a href={link} target="_blank" style="max-width: 25%;">
+		<img alt={imagePath} src="/src/lib/images/projects/{imagePath}" />
+	</a>
 </div>
 
 <style>
@@ -36,10 +38,9 @@
 		line-height: 1.5rem;
 	}
 
-	.card > img {
+	img {
 		object-fit: cover;
-		max-width: 25%;
-
+		max-width: 100%;
 		border-radius: 0.5rem;
 	}
 </style>

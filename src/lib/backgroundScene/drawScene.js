@@ -1,5 +1,3 @@
-import Bird from './bird';
-
 let ctx;
 let width, height;
 
