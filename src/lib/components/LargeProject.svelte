@@ -23,10 +23,9 @@
 		margin: 2rem 0;
 		padding: 1rem;
 		border-radius: 1rem;
-		background: rgba(0, 0, 0, 0.3);
-		backdrop-filter: blur(3px);
-
+		background: rgba(0, 0, 0, 0.2);
 		display: flex;
+		box-shadow: 0 0 32px -12px rgba(255, 255, 255, 0.2);
 	}
 
 	#title {

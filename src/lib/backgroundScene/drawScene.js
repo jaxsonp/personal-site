@@ -1,10 +1,32 @@
 let ctx;
 let width, height;
 
-let skyGradient, oceanGradient;
+let stars;
+
+class Star {
+	x;
+	y;
+	size;
+
+	constructor() {
+		this.x = Math.random();
+		this.y = Math.random();
+		this.size = Math.random() ** 2 * 2;
+	}
+
+	draw() {
+		ctx.beginPath();
+		ctx.ellipse(this.x * width, this.y * height, this.size, this.size, 0, 0, 2 * Math.PI);
+		ctx.fill();
+	}
+}
 
 export function initializeScene() {
 	console.debug('Initializing background scene');
+	stars = [];
+	for (let i = 0; i < 100; i++) {
+		stars.push(new Star());
+	}
 }
 
 export function updateCanvas(canvas) {
@@ -18,19 +40,10 @@ export function updateCanvas(canvas) {
 	}
 	ctx = new_ctx;
 
-	// sky gradient
-	skyGradient = ctx.createLinearGradient(0, 0, 0, height / 2);
-	skyGradient.addColorStop(0.0, '#0E89DB');
-	skyGradient.addColorStop(1.0, '#9ACDE7');
-	ctx.fillStyle = skyGradient;
-	ctx.fillRect(0, 0, width, height / 2);
-
-	// ocean gradient
-	oceanGradient = ctx.createLinearGradient(0, height / 2, 0, height);
-	oceanGradient.addColorStop(0.1, '#0097AE');
-	oceanGradient.addColorStop(0.3, '#056198');
-	ctx.fillStyle = oceanGradient;
-	ctx.fillRect(0, height / 2, width, height / 2);
+	ctx.fillStyle = 'white';
+	for (let i = 0; i < stars.length; i++) {
+		stars[i].draw();
+	}
 }
 
 export const drawScene = () => {
