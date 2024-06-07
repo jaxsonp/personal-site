@@ -38,12 +38,14 @@
 
 <div>
 	<canvas class="background" id="background"></canvas>
-	<!-- <header class="alert">
-		<p>🚧 This page is currently a work on progress 🚧</p>
-	</header> -->
-	<slot />
+	<div style="display: flex; justify-content: center;">
+		<slot />
+	</div>
 	<footer class="page-footer">
-		<p>Placeholder footer</p>
+		<!-- Credit for icons from flaticon -->
+		<a href="https://www.flaticon.com/free-icons/code" title="code icons">
+			Code icons created by Royyan Wijaya - Flaticon
+		</a>
 	</footer>
 </div>
 
@@ -69,17 +71,5 @@
 		background-color: black;
 
 		padding: 0.5rem;
-	}
-
-	.alert {
-		background: #ff4d4d;
-		opacity: 0.75;
-
-		display: flex;
-		justify-content: center;
-		padding: 0.5rem;
-	}
-	.alert > * {
-		margin: 0;
 	}
 </style>

@@ -13,5 +13,12 @@
 			"imagePath": "docker-dash.jpeg"
 		}
 	],
-	"other": []
+	"other": [
+		{
+			"title": "Word Searcher",
+			"link": "https://github.com/jaxsonp/word-searcher",
+			"description": "Brute force word search solver, made with Python",
+			"imagePath": "word-searcher.png"
+		}
+	]
 }

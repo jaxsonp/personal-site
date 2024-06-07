@@ -35,8 +35,17 @@ h4 {
 	font-weight: normal;
 }
 
+h5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
 p {
 	margin: 1.5rem, 0;
+}
+
+a {
+	color: #fff3e9;
 }
 
 hr {
