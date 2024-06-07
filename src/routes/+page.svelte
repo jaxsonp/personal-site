@@ -12,10 +12,10 @@
 	let otherProjects = projects['other'];
 </script>
 
-<div style="display: flex; flex-direction: column; align-items: center;">
+<div class="flex content-center">
 	<div style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
 		<p style="margin: 0; font-size: 3rem;">Hi, I'm</p>
-		<h1 id="title">
+		<h1 class="" id="title">
 			Jaxson<br />Pahukula
 		</h1>
 	</div>
