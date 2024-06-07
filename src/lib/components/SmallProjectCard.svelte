@@ -3,55 +3,16 @@
 	export let link;
 	export let description;
 	export let imagePath;
-
-	let style = $$props.style;
 </script>
 
-<div class="card" {style}>
-	<a href={link}><h5 id="title">{title}</h5></a>
-	<div style="display: grid;">
-		<img id="thumbnail" alt={imagePath} src="/src/lib/assets/projectThumbnails/{imagePath}" />
-		<p id="description">{description}</p>
+<div class="m-2 p-4 w-[calc(33%-1rem)] rounded-2xl shadow-transparent-white shadow-light grid">
+	<img
+		class="col-start-1 row-start-1 mt-8 w-full h-40 object-cover gradient-mask-t-0"
+		alt={imagePath}
+		src="/src/lib/assets/projectThumbnails/{imagePath}"
+	/>
+	<div class="col-start-1 row-start-1 z-10">
+		<a href={link}><h3 class="mb-2 leading-none">{title}</h3></a>
+		<p class="italic leading-tight drop-shadow-[0_2px_4px_black]">{description}</p>
 	</div>
 </div>
-
-<style>
-	.card {
-		margin: 0.5rem;
-		padding: 1rem;
-		width: calc(33% - 3rem);
-
-		border-radius: 1rem;
-		background: rgba(0, 0, 0, 0.2);
-		box-shadow: 0 0 32px -12px rgba(255, 255, 255, 0.2);
-	}
-
-	#title {
-		margin: 0;
-	}
-
-	#description {
-		margin: 0.5rem 0;
-		grid-column: 1;
-		grid-row: 1;
-	}
-
-	#thumbnail {
-		grid-column: 1;
-		grid-row: 1;
-		z-index: -1;
-		margin-top: 2rem;
-		width: 100%;
-		height: 10rem;
-		object-fit: cover;
-
-		-webkit-mask-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			from(rgba(0, 0, 0, 1)),
-			to(rgba(0, 0, 0, 0))
-		);
-		mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-	}
-</style>

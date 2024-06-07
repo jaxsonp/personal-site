@@ -1,7 +1,10 @@
 <script lang="js">
 	import { browser } from '$app/environment';
 
+	// stylin
 	import '../app.css';
+
+	// background stuff
 	import { initializeScene, updateCanvas, drawScene } from '$lib/backgroundScene/drawScene';
 
 	if (browser) {
@@ -36,46 +39,31 @@
 	}
 </script>
 
-<canvas class="background" id="background"></canvas>
-<div style="flex-grow: 1;">
+<canvas
+	id="background"
+	class="fixed top-0 left-0 -z-10 w-full h-full"
+	style="background: linear-gradient(
+		0deg,
+		rgba(46, 83, 148, 1) 0%,
+		rgba(21, 49, 101, 1) 7%,
+		rgba(5, 26, 69, 1) 15%,
+		rgba(0, 0, 0, 1) 100%
+	);"
+></canvas>
+<div class="grow">
 	<slot />
 </div>
-<footer class="page-footer">
-	<!-- Credit for icons from flaticon -->
+<footer class="bg-black text-center py-8">
 	<p>Made with aloha by Jaxson (me)</p>
 	<br />
+	<!-- Credit for icons from flaticon -->
 	<a href="https://www.flaticon.com/free-icons/json-file" title="json file icons">
 		Json file icons created by Assetwave - Flaticon
 	</a>
 </footer>
 
 <style>
-	canvas.background {
-		background: rgb(46, 83, 148);
-		background: linear-gradient(
-			0deg,
-			rgba(46, 83, 148, 1) 0%,
-			rgba(21, 49, 101, 1) 7%,
-			rgba(5, 26, 69, 1) 15%,
-			rgba(0, 0, 0, 1) 100%
-		);
-		position: fixed;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	.page-footer {
-		background-color: black;
-		text-align: center;
-		padding: 3rem;
-		margin-top: auto;
-	}
-
-	.page-footer * {
-		color: #777;
-		font-style: italic;
+	footer * {
+		@apply italic text-gray;
 	}
 </style>

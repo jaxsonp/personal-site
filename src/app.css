@@ -2,7 +2,24 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+h1 {
+	@apply text-6xl font-bold;
+}
+
+h2 {
+	@apply text-3xl font-bold;
+}
+
+h3 {
+	@apply text-2xl font-normal;
+}
+
+hr {
+	@apply text-gray;
+}
+
 body {
+	@apply text-white;
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
@@ -10,20 +27,18 @@ body {
 	flex-direction: column;
 }
 
+.black-glass {
+	background: rgba(0, 0, 0, 0.33);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 2rem 2rem 0 0;
+	border: #000 solid 2px;
+}
+
 /* 
 * {
 	color: #fff3e9;
 	font-family: 'Lato', sans-serif;
-}
-
-
-
-.content {
-	background: rgba(0, 0, 0, 0.33);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border-radius: 2rem 2rem 0 0;
-	border: #000 solid 2px;
 }
 
 h1 {

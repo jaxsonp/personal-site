@@ -1,14 +1,4 @@
-<hr />
-<h2>
+<hr class="m-8 w-4/5" />
+<h1 class="m-8 text-center">
 	<slot />
-</h2>
-
-<style>
-	hr {
-		margin: 2rem;
-	}
-	h2 {
-		margin: 2rem;
-		text-align: center;
-	}
-</style>
+</h1>
