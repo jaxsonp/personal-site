@@ -36,18 +36,18 @@
 	}
 </script>
 
-<div>
-	<canvas class="background" id="background"></canvas>
-	<div style="display: flex; justify-content: center;">
-		<slot />
-	</div>
-	<footer class="page-footer">
-		<!-- Credit for icons from flaticon -->
-		<a href="https://www.flaticon.com/free-icons/code" title="code icons">
-			Code icons created by Royyan Wijaya - Flaticon
-		</a>
-	</footer>
+<canvas class="background" id="background"></canvas>
+<div style="flex-grow: 1;">
+	<slot />
 </div>
+<footer class="page-footer">
+	<!-- Credit for icons from flaticon -->
+	<p>Made with aloha by Jaxson (me)</p>
+	<br />
+	<a href="https://www.flaticon.com/free-icons/json-file" title="json file icons">
+		Json file icons created by Assetwave - Flaticon
+	</a>
+</footer>
 
 <style>
 	canvas.background {
@@ -69,7 +69,13 @@
 
 	.page-footer {
 		background-color: black;
+		text-align: center;
+		padding: 3rem;
+		margin-top: auto;
+	}
 
-		padding: 0.5rem;
+	.page-footer * {
+		color: #777;
+		font-style: italic;
 	}
 </style>
