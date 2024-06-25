@@ -53,17 +53,18 @@
 <div class="grow">
 	<slot />
 </div>
-<footer class="bg-black text-center py-8">
-	<p>Made with aloha by Jaxson (me)</p>
+<footer class="bg-black text-center py-8 [&_*]:italic [&_*]:text-gray">
+	<p>© Jaxson Pahukula</p>
 	<br />
-	<!-- Credit for icons from flaticon -->
-	<a href="https://www.flaticon.com/free-icons/json-file" title="json file icons">
-		Json file icons created by Assetwave - Flaticon
-	</a>
+	<p>
+		Doc icon by
+		<a href="//commons.wikimedia.org/wiki/User:Xavi" title="User:Xavi">
+			J. Xavier Atero (for Bimetrical S.L.)
+		</a>
+		- <span class="int-own-work" lang="en">Own work</span>,
+		<a
+			href="https://creativecommons.org/licenses/by-sa/4.0"
+			title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a
+		>, <a href="https://commons.wikimedia.org/w/index.php?curid=110310218">Link</a>
+	</p>
 </footer>
-
-<style>
-	footer * {
-		@apply italic text-gray;
-	}
-</style>

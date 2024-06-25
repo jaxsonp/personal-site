@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+* {
+	@apply text-white;
+}
+
 h1 {
 	@apply text-6xl font-bold;
 }
@@ -32,7 +36,7 @@ body {
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	border-radius: 2rem 2rem 0 0;
-	border: #000 solid 2px;
+	border: #000 solid 1px;
 }
 
 /* 

@@ -7,14 +7,23 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
-				light: '0 0 32px -12px rgba(255, 255, 255, 0.2)'
+				light: '0 0 32px -12px rgba(255, 255, 255, 0.2)',
+				'sm-light': '0 8px 16px -4px rgba(255, 255, 255, 0.2)'
+			},
+			transitionProperty: {
+				height: 'height'
+			},
+			flexGrow: {
+				2: '2',
+				3: '3'
 			}
 		},
 		colors: {
-			accent: 'dodgerblue',
-			white: '#fff3e9',
-			black: '#000',
+			blue: 'dodgerblue',
+			white: '#faf3e9',
+			'light-gray': '#ccccd0',
 			gray: '#777',
+			black: '#121212',
 			glass: 'rgba(0, 0, 0, 0.33)',
 			transparent: 'rgba(0, 0, 0, 255)',
 			'transparent-white': 'rgba(255, 255, 255, 0.2)' // for box shadows

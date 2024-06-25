@@ -3,8 +3,14 @@
 		{
 			"title": "CHIP-8 Emulator",
 			"link": "https://github.com/jaxsonp/CHIP-8",
-			"description": "A basic CHIP-8 interpreter written in rust, attempting to emulate the original COSMAC VIP interpreter. I also wrote a very elementary assembler in python, which I used to create test ROMs.",
+			"description": "A basic CHIP-8 interpreter written in rust, attempting to emulate the original COSMAC VIP interpreter. Also includes a very elementary assembler in python, to create ROMs from plaintext hex.",
 			"imagePath": "chip-8.png"
+		},
+		{
+			"title": "sci-calc",
+			"link": "https://github.com/jaxsonp/sci-calc",
+			"description": "An easy to use, fully functional scientific calculator crate with CLI. Features comprehensive built-in functions and constants, variable assignment and recall, CLI with line-editing and history recall, and more.",
+			"imagePath": "sci-calc.png"
 		},
 		{
 			"title": "Docker Dash",
@@ -14,24 +20,6 @@
 		}
 	],
 	"other": [
-		{
-			"title": "Word Searcher",
-			"link": "https://github.com/jaxsonp/word-searcher",
-			"description": "Brute force word search solver, made with Python",
-			"imagePath": "word-searcher.png"
-		},
-		{
-			"title": "Word Searcher",
-			"link": "https://github.com/jaxsonp/word-searcher",
-			"description": "Brute force word search solver, made with Python",
-			"imagePath": "word-searcher.png"
-		},
-		{
-			"title": "Word Searcher asdf asdf",
-			"link": "https://github.com/jaxsonp/word-searcher",
-			"description": "Brute force word search solver, made with Python",
-			"imagePath": "word-searcher.png"
-		},
 		{
 			"title": "Word Searcher",
 			"link": "https://github.com/jaxsonp/word-searcher",
