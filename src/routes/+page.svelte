@@ -51,16 +51,16 @@
 
 		<SectionTitle>Featured Projects</SectionTitle>
 		<div class="flex flex-col gap-8 p-4 lg:w-4/5">
-			{#each featuredProjects as { title, links, description, imagePath }}
-				<LargeProjectCard {title} {description} {links} {imagePath} />
+			{#each featuredProjects as { title, links, description, imagePath, badges }}
+				<LargeProjectCard {title} {description} {links} {imagePath} {badges} />
 			{/each}
 		</div>
 
 		<div class="hidden md:block">
 			<SectionTitle>All Projects</SectionTitle>
 			<div class="m-12 grid grid-cols-3">
-				{#each otherProjects as { title, link, description, imagePath }}
-					<SmallProjectCard {title} {description} {link} {imagePath} />
+				{#each otherProjects as { title, link, description, imagePath, badges }}
+					<SmallProjectCard {title} {description} {link} {imagePath} {badges} />
 				{/each}
 			</div>
 		</div>

@@ -1,13 +1,13 @@
 <script>
 	export let title;
-	export let links;
 	export let description;
 	export let imagePath;
+	export let links;
+	export let badges;
 
-	import LinkButton from '$lib/components/LinkButton.svelte';
-
-	import githubIcon from '$lib/assets/github.svg';
-	import cargoIcon from '$lib/assets/cargo.svg';
+	import githubIcon from '$lib/assets/icons/github.svg';
+	import cargoIcon from '$lib/assets/icons/cargo.svg';
+	import BadgeList from './BadgeList.svelte';
 </script>
 
 <div
@@ -19,27 +19,33 @@
 			{#each Object.entries(links) as [name, link]}
 				{#if name == 'github'}
 					<a href={link} title="Github" target="_blank">
-						<img class="h-6 m-1" src={githubIcon} alt="Source" />
+						<img class="h-8 lg:h-6 m-1" src={githubIcon} alt="Source" />
 					</a>
 				{:else if name == 'crates.io'}
 					<a href={link} title="crates.io" target="_blank">
-						<img class="h-7 m-1" src={cargoIcon} alt="Source" />
+						<img class="h-9 lg:h-7 m-1" src={cargoIcon} alt="Source" />
 					</a>
 				{/if}
 			{/each}
 		</div>
 		<p class="text-md text-light-gray mt-2">{description}</p>
-		<img
-			class="block md:hidden w-full h-[12rem] col-start-1 row-start-1 object-cover object-top rounded-lg mt-4"
-			alt={imagePath}
-			src="/src/lib/assets/projectThumbnails/{imagePath}"
-		/>
+		<div class="grid md:hidden">
+			<img
+				class="w-full h-[12rem] col-start-1 row-start-1 object-cover object-top rounded-lg mt-4"
+				src="/src/lib/assets/thumbnails/{imagePath}"
+				alt={imagePath}
+			/>
+			<BadgeList {badges} />
+		</div>
 	</div>
-	<div class="w-[25%] md:min-w-[25%] h-32 grid">
+	<div class="hidden md:grid w-[25%] md:min-w-[25%] h-32">
 		<img
-			class="hidden md:block w-full h-full col-start-1 row-start-1 object-cover object-top rounded-lg gradient-mask-l-0"
+			class=" w-full h-full col-start-1 row-start-1 object-cover object-top rounded-lg gradient-mask-l-0"
+			src="/src/lib/assets/thumbnails/{imagePath}"
 			alt={imagePath}
-			src="/src/lib/assets/projectThumbnails/{imagePath}"
 		/>
+		<div class="col-start-1 row-start-1 self-end">
+			<BadgeList {badges} />
+		</div>
 	</div>
 </div>

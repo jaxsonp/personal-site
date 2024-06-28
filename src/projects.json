@@ -2,28 +2,31 @@
 	"featured": [
 		{
 			"title": "CHIP-8 Emulator",
+			"description": "A basic CHIP-8 interpreter written in rust, attempting to emulate the original COSMAC VIP interpreter. Also includes a very elementary assembler in python, to create ROMs from plaintext hex.",
+			"imagePath": "chip-8.png",
 			"links": {
 				"github": "https://github.com/jaxsonp/CHIP-8"
 			},
-			"description": "A basic CHIP-8 interpreter written in rust, attempting to emulate the original COSMAC VIP interpreter. Also includes a very elementary assembler in python, to create ROMs from plaintext hex.",
-			"imagePath": "chip-8.png"
+			"badges": ["Rust"]
 		},
 		{
 			"title": "sci-calc",
+			"description": "An easy to use, fully functional scientific calculator library and CLI. Uses syntax parsing for robust and elegant error handling. Also features comprehensive built-in functions, variable recall, and more. ",
+			"imagePath": "sci-calc.png",
 			"links": {
 				"github": "https://github.com/jaxsonp/sci-calc",
 				"crates.io": "https://crates.io/crates/sci-calc"
 			},
-			"description": "An easy to use, fully functional scientific calculator crate with CLI. Features comprehensive built-in functions and constants, variable assignment and recall, CLI with line-editing and history recall, and more.",
-			"imagePath": "sci-calc.png"
+			"badges": ["Rust"]
 		},
 		{
 			"title": "Docker Dash",
+			"description": "Docker Dash is a handy GUI dashboard made for administrators to manage users' apps running as docker containers on a server. I wrote the backend for this project while interning at the Applied Research Laboratory at Univeristy of Hawai'i",
+			"imagePath": "docker-dash.jpeg",
 			"links": {
 				"github": "https://github.com/jaxsonp/docker-dash"
 			},
-			"description": "Docker Dash is a handy GUI dashboard made for administrators to manage users' apps running as docker containers on a server. This is a project I worked on while interning at the Applied Research Laboratory at Univeristy of Hawai'i",
-			"imagePath": "docker-dash.jpeg"
+			"badges": ["Python, Flask"]
 		}
 	],
 	"other": [

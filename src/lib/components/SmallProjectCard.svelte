@@ -3,8 +3,9 @@
 	export let link;
 	export let description;
 	export let imagePath;
+	export let badges;
 
-	import githubIcon from '$lib/assets/github.svg';
+	import githubIcon from '$lib/assets/icons/github.svg';
 </script>
 
 <div
@@ -13,7 +14,7 @@
 	<img
 		class="col-start-1 row-start-1 mt-8 w-full h-40 object-cover gradient-mask-t-0 -z-10"
 		alt={imagePath}
-		src="/src/lib/assets/projectThumbnails/{imagePath}"
+		src="/src/lib/assets/thumbnails/{imagePath}"
 	/>
 	<div class="col-start-1 row-start-1 z-10">
 		<h3 class="mb-2 leading-none">{title}</h3>
@@ -21,7 +22,11 @@
 	</div>
 	<div class="col-start-1 row-start-1 self-end z-10 drop-shadow-[0_0_8px_black]">
 		<a href={link} title="Github" target="_blank">
-			<img class="w-8 group-hover:scale-100 transition-transform" src={githubIcon} alt="Source" />
+			<img
+				class="w-8 scale-0 group-hover:scale-100 transition-transform"
+				src={githubIcon}
+				alt="Source"
+			/>
 		</a>
 	</div>
 </div>
