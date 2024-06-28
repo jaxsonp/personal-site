@@ -41,7 +41,7 @@
 
 <canvas
 	id="background"
-	class="fixed top-0 left-0 -z-10 w-full h-full"
+	class="fixed top-0 left-0 -z-50 w-full h-full"
 	style="background: linear-gradient(
 		0deg,
 		rgba(46, 83, 148, 1) 0%,

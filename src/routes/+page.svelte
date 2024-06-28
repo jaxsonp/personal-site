@@ -17,15 +17,27 @@
 	<!-- Title section -->
 	<div class="h-screen flex flex-col justify-center">
 		<p class="text-4xl">Hi, I'm</p>
-		<h1 class="underline decoration-blue text-[8rem] font-bold leading-none">
+		<h1 class="underline decoration-blue md:text-[8rem] font-bold leading-none">
 			Jaxson<br />Pahukula
 		</h1>
 	</div>
-	<div class="black-glass w-[1000px] px-4 flex flex-col items-center">
+	<div
+		class="black-glass w-full py-8 md:p-8 lg:w-[1000px] lg:p-12 lg:rounded-t-[2rem] flex flex-col items-center"
+	>
 		<!-- Intro section -->
-		<div class="flex justify-between p-8">
-			<div>
-				<p class="text-3xl text-light-gray leading-normal m-4">
+		<div class="flex justify-between">
+			<img
+				class="hidden lg:block w-[300px] min-w-[300px] m-4 object-cover rounded-xl"
+				src={HeadshotPic}
+				alt="Jaxson's headshot"
+			/>
+			<div class="flex flex-col items-center">
+				<img
+					class="w-3/4 md:w-1/2 lg:hidden my-8 object-cover rounded-xl"
+					src={HeadshotPic}
+					alt="Jaxson's headshot"
+				/>
+				<p class="mx-8 text-xl md:text-3xl text-light-gray leading-normal">
 					I'm a computer science student at Purdue University with a passion for creating and
 					problem-solving. Welcome to my site!
 				</p>
@@ -35,33 +47,22 @@
 					<LinkButton link="./github" img={githubIcon}>Github</LinkButton>
 				</div> -->
 			</div>
-			<div class="m-4 shadow-transparent-white shadow-sm-light rounded-b-xl">
-				<img
-					class="w-[300px] min-w-[300px] object-cover rounded-t-xl"
-					src={HeadshotPic}
-					alt="Jaxson's headshot"
-				/>
-				<div class="flex justify-center">
-					<button class="py-2 px-4 flex text-xl">
-						<img src={docIcon} alt="doc" class="h-6 m-1 mr-4 brightness-90" />
-						Resume
-					</button>
-				</div>
-			</div>
 		</div>
 
 		<SectionTitle>Featured Projects</SectionTitle>
-		<div class="w-4/5">
-			{#each featuredProjects as { title, link, description, imagePath }}
-				<LargeProjectCard {title} {description} {link} {imagePath} />
+		<div class="flex flex-col gap-8 p-4 lg:w-4/5">
+			{#each featuredProjects as { title, links, description, imagePath }}
+				<LargeProjectCard {title} {description} {links} {imagePath} />
 			{/each}
 		</div>
 
-		<SectionTitle>All Projects</SectionTitle>
-		<div class="m-12 grid grid-cols-3">
-			{#each otherProjects as { title, link, description, imagePath }}
-				<SmallProjectCard {title} {description} {link} {imagePath} />
-			{/each}
+		<div class="hidden md:block">
+			<SectionTitle>All Projects</SectionTitle>
+			<div class="m-12 grid grid-cols-3">
+				{#each otherProjects as { title, link, description, imagePath }}
+					<SmallProjectCard {title} {description} {link} {imagePath} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>

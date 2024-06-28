@@ -7,11 +7,11 @@
 }
 
 h1 {
-	@apply text-6xl font-bold;
+	@apply text-4xl md:text-6xl font-bold;
 }
 
 h2 {
-	@apply text-3xl font-bold;
+	@apply text-2xl md:text-3xl font-bold;
 }
 
 h3 {
@@ -35,7 +35,6 @@ body {
 	background: rgba(0, 0, 0, 0.33);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
-	border-radius: 2rem 2rem 0 0;
 	border: #000 solid 1px;
 }
 

@@ -8,10 +8,10 @@
 </script>
 
 <div
-	class="group m-3 p-4 rounded-2xl shadow-transparent-white shadow-light grid transition-transform hover:scale-105"
+	class="group p-4 rounded-2xl shadow-transparent-white shadow-light grid transition-transform hover:scale-105"
 >
 	<img
-		class="col-start-1 row-start-1 mt-8 w-full h-40 object-cover gradient-mask-t-0"
+		class="col-start-1 row-start-1 mt-8 w-full h-40 object-cover gradient-mask-t-0 -z-10"
 		alt={imagePath}
 		src="/src/lib/assets/projectThumbnails/{imagePath}"
 	/>
@@ -21,11 +21,7 @@
 	</div>
 	<div class="col-start-1 row-start-1 self-end z-10 drop-shadow-[0_0_8px_black]">
 		<a href={link} title="Github" target="_blank">
-			<img
-				class="w-8 scale-0 group-hover:scale-100 transition-transform"
-				src={githubIcon}
-				alt="Source"
-			/>
+			<img class="w-8 group-hover:scale-100 transition-transform" src={githubIcon} alt="Source" />
 		</a>
 	</div>
 </div>
