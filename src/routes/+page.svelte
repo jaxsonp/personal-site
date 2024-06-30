@@ -1,12 +1,9 @@
 <script>
-	import { goto } from '$app/navigation';
-
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import LargeProjectCard from '$lib/components/LargeProjectCard.svelte';
 	import SmallProjectCard from '$lib/components/SmallProjectCard.svelte';
 
 	import HeadshotPic from '$lib/assets/headshot.jpg';
-	import docIcon from '$lib/assets/doc.svg';
 
 	import projects from '../projects.json';
 	let featuredProjects = projects['featured'];
@@ -51,16 +48,16 @@
 
 		<SectionTitle>Featured Projects</SectionTitle>
 		<div class="flex flex-col gap-8 p-4 lg:w-4/5">
-			{#each featuredProjects as { title, links, description, imagePath, badges }}
-				<LargeProjectCard {title} {description} {links} {imagePath} {badges} />
+			{#each featuredProjects as { title, links, description, thumbnail, badges }}
+				<LargeProjectCard {title} {description} {links} {thumbnail} {badges} />
 			{/each}
 		</div>
 
 		<div class="hidden md:block">
 			<SectionTitle>All Projects</SectionTitle>
 			<div class="m-12 grid grid-cols-3">
-				{#each otherProjects as { title, link, description, imagePath, badges }}
-					<SmallProjectCard {title} {description} {link} {imagePath} {badges} />
+				{#each otherProjects as { title, link, description, thumbnail, badges }}
+					<SmallProjectCard {title} {description} {link} {thumbnail} {badges} />
 				{/each}
 			</div>
 		</div>

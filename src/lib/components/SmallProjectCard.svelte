@@ -2,7 +2,7 @@
 	export let title;
 	export let link;
 	export let description;
-	export let imagePath;
+	export let thumbnail;
 	export let badges;
 
 	import githubIcon from '$lib/assets/icons/github.svg';
@@ -13,8 +13,8 @@
 >
 	<img
 		class="col-start-1 row-start-1 mt-8 w-full h-40 object-cover gradient-mask-t-0 -z-10"
-		alt={imagePath}
-		src="/src/lib/assets/thumbnails/{imagePath}"
+		alt={thumbnail}
+		src="/src/lib/assets/thumbnails/{thumbnail}"
 	/>
 	<div class="col-start-1 row-start-1 z-10">
 		<h3 class="mb-2 leading-none">{title}</h3>
