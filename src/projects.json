@@ -2,50 +2,51 @@
 	"featured": [
 		{
 			"title": "CHIP-8 Emulator",
-			"description": "A basic CHIP-8 interpreter written in rust, attempting to emulate the original COSMAC VIP interpreter. Also includes a very elementary assembler in python, to create ROMs from plaintext hex.",
-			"thumbnail": "chip-8.png",
+			"description": "A CHIP-8 interpreter written in rust, emulating the original COSMAC VIP interpreter. Includes an elementary assembler in python, to create ROMs from plaintext hex, and example ROMS such as space invaders or snake.",
+			"thumbnailFile": "chip-8.png",
 			"links": {
 				"github": "https://github.com/jaxsonp/CHIP-8"
 			},
-			"badges": ["Rust"]
+			"tags": ["Rust"]
 		},
 		{
 			"title": "sci-calc",
 			"description": "An easy to use, fully functional scientific calculator library and CLI. Uses syntax parsing for robust and elegant error handling. Also features comprehensive built-in functions, variable recall, and more. ",
-			"thumbnail": "sci-calc.png",
+			"thumbnailFile": "sci-calc.png",
 			"links": {
 				"github": "https://github.com/jaxsonp/sci-calc",
 				"crates.io": "https://crates.io/crates/sci-calc"
 			},
-			"badges": ["Rust"]
+			"tags": ["Rust"]
 		},
 		{
 			"title": "Docker Dash",
-			"description": "Docker Dash is a handy GUI dashboard made for administrators to manage users' apps running as docker containers on a server. I wrote the backend for this project while interning at the Applied Research Laboratory at Univeristy of Hawai'i",
-			"thumbnail": "docker-dash.jpeg",
+			"description": "Docker Dash is a basic GUI dashboard made for administrators to manage user apps running as docker containers on a server. I worked the backend while interning at the Applied Research Laboratory at Univeristy of Hawai'i",
+			"thumbnailFile": "docker-dash.jpeg",
 			"links": {
 				"github": "https://github.com/jaxsonp/docker-dash"
 			},
-			"badges": ["Python", "Flask"]
+			"tags": ["Python", "Flask"]
 		}
 	],
 	"other": [
 		{
 			"title": "Word Searcher",
+			"description": "Brute force word search solver, made with Python",
+			"thumbnailFile": "word-searcher.png",
 			"links": {
 				"github": "https://github.com/jaxsonp/word-searcher"
 			},
-			"description": "Brute force word search solver, made with Python",
-			"thumbnail": "word-searcher.png",
-			"badges": ["Python"]
+			"tags": ["Python"]
 		},
 		{
 			"title": "Portfolio",
+			"description": "This website! Made with Svelte",
+			"thumbnailFile": "portfolio.png",
 			"links": {
 				"github": "https://github.com/jaxsonp/portfolio"
 			},
-			"description": "This website! Made with Svelte",
-			"thumbnail": "portfolio.png"
+			"tags": ["Svelte", "Tailwind"]
 		}
 	]
 }

@@ -17,7 +17,6 @@ class Star {
 	}
 
 	draw() {
-		console.log('drawing');
 		if (this.x < width && this.y < height) {
 			ctx.beginPath();
 			ctx.ellipse(this.x, this.y, this.size, this.size, 0, 0, 2 * Math.PI);

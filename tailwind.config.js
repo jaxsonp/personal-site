@@ -8,7 +8,7 @@ module.exports = {
 		colors: {
 			blue: 'dodgerblue',
 			white: '#faf3e9',
-			'light-gray': '#ccccd0',
+			'light-gray': '#bebed2',
 			gray: '#777',
 			black: '#121212',
 			glass: 'rgba(0, 0, 0, 0.33)',
@@ -16,11 +16,12 @@ module.exports = {
 			'transparent-white': 'rgba(255, 255, 255, 0.2)' // for box shadows
 		},
 		fontFamily: {
-			sans: ['Lato', 'sans-serif']
+			mono: ['Inconsolata', 'mono']
 		},
 		screens: {
 			md: '768px',
-			lg: '1024px'
+			lg: '1024px',
+			xl: '1366px'
 		},
 		extend: {
 			boxShadow: {

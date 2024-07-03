@@ -50,21 +50,11 @@
 		rgba(0, 0, 0, 1) 100%
 	);"
 ></canvas>
-<div class="grow">
+<div>
 	<slot />
 </div>
-<footer class="bg-black text-center py-8 [&_*]:italic [&_*]:text-gray">
-	<p>© Jaxson Pahukula</p>
-	<br />
-	<p>
-		Doc icon by
-		<a href="//commons.wikimedia.org/wiki/User:Xavi" title="User:Xavi">
-			J. Xavier Atero (for Bimetrical S.L.)
-		</a>
-		- <span class="int-own-work" lang="en">Own work</span>,
-		<a
-			href="https://creativecommons.org/licenses/by-sa/4.0"
-			title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a
-		>, <a href="https://commons.wikimedia.org/w/index.php?curid=110310218">Link</a>
-	</p>
+<footer class="flex justify-end">
+	<div class="bg-black rounded-t-md">
+		<p class="mx-1 px-2 text-center text-gray italic">© 2024 Jaxson Pahukula</p>
+	</div>
 </footer>
