@@ -24,7 +24,11 @@
 			<p class="mx-16 lg:mx-0 my-8 text-lg">
 				I am computer science student at Purdue university, blah blah blah. Welcome to my site!
 			</p>
-			<a href="mailto:jaxpahu@gmail.com">jaxpahu@gmail.com</a>
+			<div class="text-xl text-center flex flex-col gap-2 m-4">
+				<a href="mailto:jaxpahu@gmail.com" class="hover:text-blue">jaxpahu@gmail.com</a>
+				<a href="https://github.com/jaxsonp" class="hover:text-blue">Github</a>
+				<a href="https://www.linkedin.com/in/jaxsonp/" class="hover:text-blue">LinkedIn</a>
+			</div>
 		</div>
 		<div class="lg:ml-6 lg:mt-16 flex justify-center">
 			<div class="flex flex-col gap-2 text-nowrap text-center lg:text-right leading-none text-base">
