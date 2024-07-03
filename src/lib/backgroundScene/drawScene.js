@@ -1,3 +1,5 @@
+const STARS_PER_PX = 0.00025;
+
 let ctx;
 let width, height;
 
@@ -8,24 +10,29 @@ class Star {
 	y;
 	size;
 
-	constructor() {
-		this.x = Math.random();
-		this.y = Math.random();
+	constructor(w, h) {
+		this.x = Math.random() * w;
+		this.y = Math.random() * h;
 		this.size = Math.random() ** 2 * 2;
 	}
 
 	draw() {
-		ctx.beginPath();
-		ctx.ellipse(this.x * width, this.y * height, this.size, this.size, 0, 0, 2 * Math.PI);
-		ctx.fill();
+		console.log('drawing');
+		if (this.x < width && this.y < height) {
+			ctx.beginPath();
+			ctx.ellipse(this.x, this.y, this.size, this.size, 0, 0, 2 * Math.PI);
+			ctx.fill();
+		}
 	}
 }
 
-export function initializeScene() {
+export function initializeScene(w, h) {
 	console.debug('Initializing background scene');
 	stars = [];
-	for (let i = 0; i < 100; i++) {
-		stars.push(new Star());
+	let n_stars = w * h * STARS_PER_PX;
+	console.debug('n stars:', n_stars);
+	for (let i = 0; i < n_stars; i++) {
+		stars.push(new Star(w, h));
 	}
 }
 

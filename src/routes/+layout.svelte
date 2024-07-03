@@ -26,7 +26,7 @@
 			window.addEventListener('resize', resizeBackground, false);
 
 			// initializing
-			initializeScene();
+			initializeScene(window.innerWidth, window.innerHeight);
 			resizeBackground();
 
 			// loop for drawing background scene
