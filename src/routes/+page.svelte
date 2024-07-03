@@ -37,7 +37,7 @@
 	</section>
 	<!-- spacer div  -->
 	<div class="lg:min-w-[525px]" />
-	<div class="mx-4 mt-8 flex flex-col gap-16">
+	<div class="mx-4 my-8 flex flex-col gap-16">
 		<section class="black-glass w-full p-4 lg:px-8 lg:mt-8 rounded-2xl">
 			<h2 id="featured-projects" class="mx-4">Featured Projects</h2>
 			<div class="mt-4 flex flex-col gap-8">

@@ -9,7 +9,6 @@
 
 	if (browser) {
 		window.onload = () => {
-			console.log('Window loaded');
 			let canvas = document.getElementById('background');
 			const resizeBackground = () => {
 				canvas.width = window.innerWidth;
@@ -53,7 +52,7 @@
 <div>
 	<slot />
 </div>
-<footer class="flex justify-end">
+<footer id="footer" class="flex justify-end">
 	<div class="bg-black rounded-t-md">
 		<p class="mx-1 px-2 text-center text-gray italic">© 2024 Jaxson Pahukula</p>
 	</div>
