@@ -7,6 +7,17 @@
 	import projects from '../projects.json';
 	let featuredProjects = projects['featured'];
 	let otherProjects = projects['other'];
+
+	// preloading thumbnails, svelte enhanced:img moment
+	const thumbnailModules = import.meta.glob(
+		'$lib/assets/thumbnails/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+		{
+			eager: true,
+			query: {
+				enhanced: true
+			}
+		}
+	);
 </script>
 
 <main class="flex flex-col lg:flex-row px-2 lg:pl-[10vw] lg:pr-[5vw]">
@@ -26,7 +37,7 @@
 			</p>
 			<div class="text-xl text-center flex flex-col gap-2 m-4">
 				<a href="/resume.pdf" class="group hover:text-blue">My Resume 🗋</a>
-				<a href="mailto:jaxpahu@gmail.com" class="hover:text-blue">jaxpahu@gmail.com ✉</a>
+				<a href="mailto:jaxpahu@gmail.com" class="hover:text-blue">jaxpahu@gmail.com 🖂</a>
 				<a href="https://github.com/jaxsonp" class="hover:text-blue">Github {'>'}</a>
 				<a href="https://www.linkedin.com/in/jaxsonp/" class="hover:text-blue">LinkedIn {'>'}</a>
 			</div>
@@ -47,7 +58,13 @@
 			<h2 id="featured-projects" class="mx-4">Featured Projects</h2>
 			<div class="mt-4 flex flex-col gap-8">
 				{#each featuredProjects as { title, description, thumbnailFile, links, tags }}
-					<LargeProjectCard {title} {description} {thumbnailFile} {links} {tags} />
+					<LargeProjectCard
+						{title}
+						{description}
+						thumbnail={thumbnailModules[`/src/lib/assets/thumbnails/${thumbnailFile}`].default}
+						{links}
+						{tags}
+					/>
 				{/each}
 			</div>
 		</section>
@@ -59,7 +76,13 @@
 			<h2 id="projects" class="mx-4">All Projects</h2>
 			<div class="mt-4 grid grid-cols-2 xl:grid-cols-3 gap-4">
 				{#each otherProjects as { title, description, thumbnailFile, links, tags }}
-					<SmallProjectCard {title} {description} {thumbnailFile} {links} {tags} />
+					<SmallProjectCard
+						{title}
+						{description}
+						thumbnail={thumbnailModules[`/src/lib/assets/thumbnails/${thumbnailFile}`].default}
+						{links}
+						{tags}
+					/>
 				{/each}
 			</div>
 		</section>
