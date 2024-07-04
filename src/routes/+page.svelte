@@ -21,10 +21,12 @@
 </script>
 
 <main class="flex flex-col lg:flex-row px-2 lg:pl-[10vw] lg:pr-[5vw]">
-	<section class="lg:fixed lg:top-0 lg:h-screen md:grow lg:w-[400px] flex flex-col lg:flex-row">
-		<div class="flex flex-col justify-center items-center h-[96vh] lg:h-screen">
+	<section
+		class="mt-16 lg:mt-0 lg:fixed lg:top-0 lg:h-screen lg:w-[400px] flex flex-col lg:flex-row"
+	>
+		<div class="flex flex-col justify-center items-center lg:h-screen">
 			<img class="w-[200px] rounded-full border-black border-4" src={headshotPic} alt="Me pic" />
-			<div class="mx-8 md:my-8">
+			<div class="m-8 mb-0 lg:mb-8">
 				<p class="text-[1.5rem]">Hi, I'm</p>
 				<h1
 					class="leading-none font-bold decoration-blue decoration-8 underline underline-offset-2"
@@ -32,16 +34,14 @@
 					Jaxson<br />Pahukula
 				</h1>
 			</div>
-			<p class="mx-16 lg:mx-0 my-8 text-lg">
-				I am computer science student at Purdue university, blah blah blah. Welcome to my site!
-			</p>
-			<div class="text-xl text-center flex flex-col gap-2 m-4">
+			<div class="text-xl text-center flex flex-col gap-2 m-4 mt-16 lg:mt-4">
 				<a href="/resume.pdf" class="group hover:text-blue">My Resume 🗋</a>
 				<a href="mailto:jaxpahu@gmail.com" class="hover:text-blue">jaxpahu@gmail.com 🖂</a>
 				<a href="https://github.com/jaxsonp" class="hover:text-blue">Github {'>'}</a>
 				<a href="https://www.linkedin.com/in/jaxsonp/" class="hover:text-blue">LinkedIn {'>'}</a>
 			</div>
 		</div>
+		<hr class="lg:hidden m-16" />
 		<div class="lg:ml-6 lg:mt-16 flex justify-center">
 			<div class="flex flex-col gap-2 text-nowrap text-center lg:text-right leading-none text-base">
 				<h3 class="md:mb-4 text-2x md:text-3xl lg:text-xl text-left">Jump to...</h3>
