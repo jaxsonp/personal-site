@@ -25,9 +25,10 @@
 				I am computer science student at Purdue university, blah blah blah. Welcome to my site!
 			</p>
 			<div class="text-xl text-center flex flex-col gap-2 m-4">
-				<a href="mailto:jaxpahu@gmail.com" class="hover:text-blue">jaxpahu@gmail.com</a>
-				<a href="https://github.com/jaxsonp" class="hover:text-blue">Github</a>
-				<a href="https://www.linkedin.com/in/jaxsonp/" class="hover:text-blue">LinkedIn</a>
+				<a href="/resume.pdf" class="group hover:text-blue">My Resume 🗋</a>
+				<a href="mailto:jaxpahu@gmail.com" class="hover:text-blue">jaxpahu@gmail.com ✉</a>
+				<a href="https://github.com/jaxsonp" class="hover:text-blue">Github {'>'}</a>
+				<a href="https://www.linkedin.com/in/jaxsonp/" class="hover:text-blue">LinkedIn {'>'}</a>
 			</div>
 		</div>
 		<div class="lg:ml-6 lg:mt-16 flex justify-center">
