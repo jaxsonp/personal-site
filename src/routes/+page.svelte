@@ -45,6 +45,7 @@
 		<div class="lg:ml-6 lg:mt-16 flex justify-center">
 			<div class="flex flex-col gap-2 text-nowrap text-center lg:text-right leading-none text-base">
 				<h3 class="md:mb-4 text-2x md:text-3xl lg:text-xl text-left">Jump to...</h3>
+				<a href="#about-me" class="hover:text-blue">About Me {'>'}</a>
 				<a href="#featured-projects" class="hover:text-blue">Featured Projects {'>'}</a>
 				<a href="#experience" class="hover:text-blue">My Experience {'>'}</a>
 				<a href="#projects" class="hover:text-blue">All Projects {'>'}</a>
@@ -53,9 +54,13 @@
 	</section>
 	<!-- spacer div  -->
 	<div class="lg:min-w-[525px]" />
-	<div class="mx-4 my-8 flex flex-col gap-16">
+	<div class="mx-4 my-8 flex flex-col gap-12">
+		<section class="black-glass w-full p-4 lg:px-12 rounded-2xl">
+			<h2 id="about-me">About Me</h2>
+			<p class="my-4">TODO put stuff here</p>
+		</section>
 		<section class="black-glass w-full p-4 lg:px-8 lg:mt-8 rounded-2xl">
-			<h2 id="featured-projects" class="mx-4">Featured Projects</h2>
+			<h2 id="featured-projects">Featured Projects</h2>
 			<div class="mt-4 flex flex-col gap-8">
 				{#each featuredProjects as { title, description, thumbnailFile, links, tags }}
 					<LargeProjectCard
@@ -68,12 +73,12 @@
 				{/each}
 			</div>
 		</section>
-		<section class="black-glass w-full p-4 lg:px-12 rounded-2xl">
-			<h2 id="experience" class="">My Experience</h2>
+		<section class="black-glass w-full p-4 lg:px-8 rounded-2xl">
+			<h2 id="experience">My Experience</h2>
 			<p class="my-4">TODO put stuff here (I have experience i swear)</p>
 		</section>
 		<section class="black-glass w-full p-4 lg:px-8 rounded-2xl">
-			<h2 id="projects" class="mx-4">All Projects</h2>
+			<h2 id="projects">All Projects</h2>
 			<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
 				{#each otherProjects as { title, description, thumbnailFile, links, tags }}
 					<SmallProjectCard
