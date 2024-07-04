@@ -23,7 +23,7 @@
 		{:else}
 			<div class="w-full col-start-1 row-start-1 mt-8">
 				<enhanced:img
-					class="w-auto h-40 rounded-md object-cover gradient-mask-t-0 -z-10"
+					class="w-auto min-w-full h-auto max-h-40 min-h-40 rounded-md object-cover gradient-mask-t-0 -z-10"
 					alt={title}
 					src={thumbnail}
 				/>
@@ -31,9 +31,11 @@
 		{/if}
 		<div class="col-start-1 row-start-1 z-10">
 			<h3 class="mb-2 leading-none">{title}</h3>
-			<p class="italic text-light-gray leading-tight drop-shadow-[0_2px_4px_black]">
-				{description}
-			</p>
+			<div class="drop-shadow-[0_1px_2px_#000000]">
+				<p class="italic text-light-gray leading-tight">
+					{description}
+				</p>
+			</div>
 		</div>
 		<div
 			class="col-start-1 row-start-1 self-end w-fit z-10 transition-transform scale-0 group-hover:scale-102 bg-black rounded-bl-md rounded-tr-md"

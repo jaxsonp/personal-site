@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="p-4 flex shadow-transparent-white shadow-light rounded-2xl transition-transform hover:scale-102"
+	class="p-4 flex flex-col md:flex-row shadow-transparent-white shadow-light rounded-2xl transition-transform hover:scale-102"
 >
 	<div class="grow flex flex-col min-h-[10rem]">
 		<div class="flex justify-between">
@@ -43,11 +43,9 @@
 		</p>
 		<p class="text-light-gray">{description}</p>
 	</div>
-	<div class="hidden md:block min-w-[10rem]">
-		<enhanced:img
-			class="w-auto h-[10rem] object-cover object-top rounded-lg gradient-mask-l-0"
-			src={thumbnail}
-			alt={title}
-		/>
-	</div>
+	<enhanced:img
+		class="mt-2 md:mt-0 w-full md:min-w-40 md:max-w-40 h-auto min-h-40 max-h-40 object-cover object-top rounded-lg md:gradient-mask-l-0"
+		src={thumbnail}
+		alt={title}
+	/>
 </div>

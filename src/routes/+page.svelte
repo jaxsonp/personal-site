@@ -74,7 +74,7 @@
 		</section>
 		<section class="black-glass w-full p-4 lg:px-8 rounded-2xl">
 			<h2 id="projects" class="mx-4">All Projects</h2>
-			<div class="mt-4 grid grid-cols-2 xl:grid-cols-3 gap-4">
+			<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
 				{#each otherProjects as { title, description, thumbnailFile, links, tags }}
 					<SmallProjectCard
 						{title}
