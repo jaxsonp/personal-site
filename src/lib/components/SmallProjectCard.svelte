@@ -5,8 +5,7 @@
 	export let thumbnail;
 	export let tags;
 
-	import githubIcon from '$lib/assets/icons/github.svg';
-	import cargoIcon from '$lib/assets/icons/cargo.svg';
+	import LinkBadges from './LinkBadges.svelte';
 </script>
 
 <div
@@ -15,7 +14,7 @@
 	<div class="grid">
 		{#if title == 'Portfolio'}
 			<iframe
-				class="col-start-1 row-start-1 mt-8 w-full h-40 rounded-md gradient-mask-t-0 -z-10"
+				class="col-start-1 row-start-1 mt-8 w-full h-36 rounded-md gradient-mask-t-0 -z-10"
 				title="Inception"
 				alt={thumbnail}
 				src="/blank"
@@ -23,7 +22,7 @@
 		{:else}
 			<div class="w-full col-start-1 row-start-1 mt-8">
 				<enhanced:img
-					class="w-auto min-w-full h-auto max-h-40 min-h-40 rounded-md object-cover gradient-mask-t-0 -z-10"
+					class="w-auto min-w-full max-w-full h-auto max-h-36 min-h-36 rounded-lg object-cover gradient-mask-t-0 -z-10"
 					alt={title}
 					src={thumbnail}
 				/>
@@ -38,17 +37,9 @@
 			</div>
 		</div>
 		<div
-			class="col-start-1 row-start-1 self-end w-fit z-10 transition-transform scale-0 group-hover:scale-102 bg-black rounded-bl-md rounded-tr-md"
+			class="col-start-1 row-start-1 self-end w-fit z-10 transition-transform scale-0 group-hover:scale-102 bg-black rounded-bl-lg rounded-tr-lg"
 		>
-			{#each Object.entries(links) as [name, link]}
-				<a href={link} title={name} target="_blank" class="">
-					{#if name == 'github'}
-						<img class="h-8 lg:h-6 m-1 inline" src={githubIcon} alt="Source" />
-					{:else if name == 'crates.io'}
-						<img class="h-9 lg:h-7 m-1 inline" src={cargoIcon} alt="Source" />
-					{/if}
-				</a>
-			{/each}
+			<LinkBadges {links} />
 		</div>
 	</div>
 	<p class="italic text-light-gray mt-2">

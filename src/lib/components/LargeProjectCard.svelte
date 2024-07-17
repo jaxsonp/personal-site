@@ -5,9 +5,7 @@
 	export let links;
 	export let tags;
 
-	import githubIcon from '$lib/assets/icons/github.svg';
-	import cargoIcon from '$lib/assets/icons/cargo.svg';
-	import BadgeList from './BadgeList.svelte';
+	import LinkBadges from '$lib/components/LinkBadges.svelte';
 </script>
 
 <div
@@ -17,24 +15,7 @@
 		<div class="flex justify-between">
 			<div class="flex justify-between items-center w-full">
 				<h3>{title}</h3>
-				<div class="flex">
-					{#each Object.entries(links) as [name, link]}
-						{#if name == 'github'}
-							<a href={link} title="Github" target="_blank">
-								<img
-									class="h-8 min-w-6 lg:h-6 m-1"
-									src={githubIcon}
-									alt="Github"
-									title="Github repository"
-								/>
-							</a>
-						{:else if name == 'crates.io'}
-							<a href={link} title="crates.io" target="_blank">
-								<img class="h-9 lg:h-7 m-1" src={cargoIcon} alt="Source" title="crates.io page" />
-							</a>
-						{/if}
-					{/each}
-				</div>
+				<LinkBadges {links} />
 			</div>
 		</div>
 		<p class="ml-2 italic text-base">

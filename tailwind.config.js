@@ -4,6 +4,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
 	mode: 'jit',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	safelist: ['grid-cols-2', 'grid-cols-3', 'grid-cols-42'],
 	theme: {
 		colors: {
 			blue: 'dodgerblue',

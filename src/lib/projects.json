@@ -29,7 +29,7 @@
 			"tags": ["Python", "Flask"]
 		}
 	],
-	"other": [
+	"all": [
 		{
 			"title": "Word Searcher",
 			"description": "Brute force word search generator and solver",
@@ -40,11 +40,11 @@
 			"tags": ["Python"]
 		},
 		{
-			"title": "Portfolio",
+			"title": "Personal Site",
 			"description": "This website! Made with love and Svelte",
 			"thumbnailFile": "portfolio.png",
 			"links": {
-				"github": "https://github.com/jaxsonp/portfolio"
+				"github": "https://github.com/jaxsonp/personal-site"
 			},
 			"tags": ["Svelte", "Tailwind"]
 		},
@@ -75,6 +75,16 @@
 				"github": "https://github.com/jaxsonp/docker-dash"
 			},
 			"tags": ["Python", "Flask"]
+		},
+		{
+			"title": "Beat Ballot",
+			"description": "Build collaborative spotify playlists by voting w/ your friends! Boilermake XI hackathon entry",
+			"thumbnailFile": "beat-ballot.png",
+			"links": {
+				"github": "https://github.com/jaxsonp/beat-ballot",
+				"devpost": "https://devpost.com/software/beatballot-bnzxu7"
+			},
+			"tags": ["React", "SQLite", "Python", "Flask"]
 		}
 	]
 }

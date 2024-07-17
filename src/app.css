@@ -23,6 +23,10 @@ hr {
 	@apply text-gray;
 }
 
+a {
+	@apply hover:text-blue;
+}
+
 body {
 	@apply text-white;
 	margin: 0;
