@@ -12,7 +12,7 @@
 	allProjects.sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase());
 
 	// project carousel stuff
-	const nProjectRows = 2;
+	const nProjectRows = 3;
 	$: projectsPerPage = 0;
 	//$: console.log(projectsPerPage / nProjectRows);
 	$: nPages = Math.ceil(allProjects.length / projectsPerPage);
@@ -20,14 +20,14 @@
 
 	// checks if next or previous buttons need to be disabled on the carousel
 	const checkDisableCarouselButtons = () => {
-		console.log(curPage)
+		console.log(curPage);
 		if (browser) {
 			let nextButton = document.getElementById('carousel-next-button');
-			nextButton.disabled = (curPage >= nPages - 1);
+			nextButton.disabled = curPage >= nPages - 1;
 			let prevButton = document.getElementById('carousel-prev-button');
-			prevButton.disabled = (curPage <= 0);
+			prevButton.disabled = curPage <= 0;
 		}
-	}
+	};
 	const goToNextPage = () => {
 		curPage++;
 		checkDisableCarouselButtons();
@@ -36,7 +36,7 @@
 		curPage--;
 		checkDisableCarouselButtons();
 	};
-	
+
 	if (browser) {
 		// dynamically changing number of projects shown
 		const handleWindowResize = () => {
@@ -135,12 +135,20 @@
 				<h2 id="all-projects">All Projects</h2>
 				<a href="/projects" class="underline text-xl">See them all {'>'}</a>
 			</div>
-			<p class="text-center text-base italic text-light-gray">Page {curPage + 1	} of {nPages}</p>
+			<p class="text-center text-base italic text-light-gray">Page {curPage + 1} of {nPages}</p>
 			<div class="flex pb-4 justify-center text-lg text-light-gray">
-				<button id="carousel-prev-button" class="px-3 disabled:line-through disabled:italic disabled:text-gray" on:click={goToPrevPage}>{'<'} Prev</button>
-				<button id="carousel-next-button" class="px-3 disabled:line-through disabled:italic disabled:text-gray" on:click={goToNextPage}>Next {'>'}</button>
+				<button
+					id="carousel-prev-button"
+					class="px-3 disabled:line-through disabled:italic disabled:text-gray"
+					on:click={goToPrevPage}>{'<'} Prev</button
+				>
+				<button
+					id="carousel-next-button"
+					class="px-3 disabled:line-through disabled:italic disabled:text-gray"
+					on:click={goToNextPage}>Next {'>'}</button
+				>
 			</div>
-			<div id="project-container" class="grid gap-4 grid-cols-{(projectsPerPage / nProjectRows)}">
+			<div id="project-container" class="grid gap-4 grid-cols-{projectsPerPage / nProjectRows}">
 				{#each displayedProjects as { title, description, thumbnailFile, links, tags }}
 					<SmallProjectCard
 						{title}

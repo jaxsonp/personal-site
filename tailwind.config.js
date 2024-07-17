@@ -4,12 +4,17 @@ const colors = require('tailwindcss/colors');
 module.exports = {
 	mode: 'jit',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	safelist: ['grid-cols-2', 'grid-cols-3', 'grid-cols-42'],
+	safelist: [
+		// for the carousel dynamically updating number of cols
+		'grid-cols-2',
+		'grid-cols-3',
+		'grid-cols-42'
+	],
 	theme: {
 		colors: {
 			blue: 'dodgerblue',
 			white: '#faf3e9',
-			'light-gray': '#bebed2',
+			'light-gray': '#c5c5d6',
 			gray: '#777',
 			black: '#121212',
 			glass: 'rgba(0, 0, 0, 0.33)',
