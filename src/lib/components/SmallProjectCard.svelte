@@ -12,7 +12,7 @@
 	class="group p-4 rounded-2xl shadow-transparent-white shadow-light transition-transform hover:scale-105"
 >
 	<div class="grid">
-		{#if title == 'Portfolio'}
+		{#if title == 'Personal Site'}
 			<iframe
 				class="col-start-1 row-start-1 mt-8 w-full h-36 rounded-md gradient-mask-t-0 -z-10"
 				title="Inception"
