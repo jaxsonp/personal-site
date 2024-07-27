@@ -12,7 +12,7 @@
 	allProjects.sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase());
 
 	// project carousel stuff
-	const nProjectRows = 3;
+	const nProjectRows = 2;
 	$: projectsPerPage = 0;
 	//$: console.log(projectsPerPage / nProjectRows);
 	$: nPages = Math.ceil(allProjects.length / projectsPerPage);
@@ -41,9 +41,9 @@
 		// dynamically changing number of projects shown
 		const handleWindowResize = () => {
 			let container = document.getElementById('project-container');
-			if (container.clientWidth > 500) {
+			if (container.clientWidth > 600) {
 				projectsPerPage = 3 * nProjectRows;
-			} else if (container.clientWidth > 375) {
+			} else if (container.clientWidth > 350) {
 				projectsPerPage = 2 * nProjectRows;
 			} else {
 				projectsPerPage = nProjectRows;
@@ -51,10 +51,10 @@
 			if (curPage >= nPages) {
 				curPage = nPages - 1;
 			}
-			checkDisableCarouselButtons();
 		};
 		window.addEventListener('resize', handleWindowResize, false);
 		window.addEventListener('load', handleWindowResize, false);
+		window.addEventListener('load', checkDisableCarouselButtons, false);
 	}
 	$: displayedProjects = allProjects.slice(
 		curPage * projectsPerPage,
@@ -80,7 +80,7 @@
 		<!-- left hand card -->
 		<section class="mt-16 lg:m-0 lg:absolute lg:left-[-100px] lg:h-full lg:w-[300px]">
 			<div class="lg:sticky lg:top-0 lg:h-screen flex justify-center items-center">
-				<div class="flex flex-col justify-center items-center rounded-2xl black-glass border-white">
+				<div class="flex flex-col justify-center items-center p-2 rounded-2xl lg:black-glass">
 					<img
 						class="w-[160px] rounded-full border-black border-4"
 						src={headshotPic}
@@ -104,12 +104,12 @@
 			</div>
 		</section>
 		<!-- Main content -->
-		<div class="my-8 lg:pl-[200px] flex flex-col gap-12 black-glass lg:no-black-glass">
-			<section class=" w-full p-4 lg:px-12 rounded-2xl">
+		<div class="my-8 lg:pl-[216px] flex flex-col gap-12 rounded-2xl black-glass">
+			<section class=" w-full p-4 lg:px-12">
 				<h2 id="about-me">About Me</h2>
 				<p class="my-4">TODO put stuff here</p>
 			</section>
-			<section class="w-full p-4 lg:px-8 lg:mt-8 rounded-2xl">
+			<section class="w-full p-4 lg:px-8 lg:mt-8">
 				<h2 id="featured-projects">Featured Projects</h2>
 				<div class="mt-4 flex justify-center">
 					<div class="flex flex-col gap-8 w-full lg:max-w-[80%]">
@@ -125,11 +125,12 @@
 					</div>
 				</div>
 			</section>
-			<section class="w-full p-4 lg:px-8 rounded-2xl">
+			<section class="w-full p-4 lg:px-8">
 				<h2 id="experience">My Experience</h2>
 				<p class="my-4">TODO put stuff here (I have experience i swear)</p>
 			</section>
-			<section class="w-full p-4 lg:px-8 rounded-2xl">
+			<!-- All projects carousel -->
+			<section class="hidden md:inline-block w-full p-4 lg:px-8">
 				<div class="mb-4 flex flex-col md:flex-row justify-between items-end">
 					<h2 id="all-projects">All Projects</h2>
 					<a href="/projects" class="underline text-xl">See them all {'>'}</a>
