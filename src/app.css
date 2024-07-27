@@ -5,13 +5,13 @@
 @layer base {
 	* {
 		font-family: monospace;
-		@apply text-white font-mono;
 	}
 	*::before,
 	*::after {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+		@apply text-white font-mono;
 	}
 
 	h1 {
@@ -50,8 +50,8 @@
 @layer utilities {
 	.black-glass {
 		background: rgba(0, 0, 0, 0.4);
-		backdrop-filter: blur(2px);
 		-webkit-backdrop-filter: blur(2px);
+		backdrop-filter: blur(2px);
 		border: #000 solid 1px;
 		z-index: -1;
 	}

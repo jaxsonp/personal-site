@@ -4,8 +4,6 @@
 		//hiding the footer
 		let footer = document.getElementById('footer');
 		footer.style.display = 'none';
-
-		console.log('Enjoy the scenery');
 	}
 
 	if (browser) {

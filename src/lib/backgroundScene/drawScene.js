@@ -28,7 +28,7 @@ class Star {
 export function initializeScene(w, h) {
 	console.debug('Initializing background scene');
 	stars = [];
-	let n_stars = w * h * STARS_PER_PX;
+	let n_stars = parseInt(w * h * STARS_PER_PX);
 	console.debug('n stars:', n_stars);
 	for (let i = 0; i < n_stars; i++) {
 		stars.push(new Star(w, h));

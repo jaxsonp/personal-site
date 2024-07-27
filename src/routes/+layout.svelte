@@ -38,17 +38,7 @@
 	}
 </script>
 
-<canvas
-	id="background"
-	class="fixed top-0 left-0 -z-50 w-full h-full"
-	style="background: linear-gradient(
-		0deg,
-		rgba(46, 83, 148, 1) 0%,
-		rgba(21, 49, 101, 1) 7%,
-		rgba(5, 26, 69, 1) 15%,
-		rgba(0, 0, 0, 1) 100%
-	);"
-></canvas>
+<canvas id="background" class="fixed top-0 left-0 -z-50 w-full h-full"></canvas>
 <div>
 	<slot />
 </div>
@@ -57,3 +47,15 @@
 		<p class="mx-1 px-2 text-center text-gray italic">© 2024 Jaxson Pahukula</p>
 	</div>
 </footer>
+
+<style>
+	#background {
+		background: linear-gradient(
+			0deg,
+			rgba(46, 83, 148, 1) 0%,
+			rgba(21, 49, 101, 1) 7%,
+			rgba(5, 26, 69, 1) 15%,
+			rgba(0, 0, 0, 1) 100%
+		);
+	}
+</style>

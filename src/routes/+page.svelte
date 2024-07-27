@@ -15,13 +15,11 @@
 	// project carousel stuff
 	const nProjectRows = 2;
 	$: projectsPerPage = 0;
-	//$: console.log(projectsPerPage / nProjectRows);
-	$: nPages = Math.ceil(allProjects.length / projectsPerPage);
+	$: nPages = projectsPerPage == 0 ? 0 : Math.ceil(allProjects.length / projectsPerPage);
 	$: curPage = 0;
 
 	// checks if next or previous buttons need to be disabled on the carousel
 	const checkDisableCarouselButtons = () => {
-		console.log(curPage);
 		if (browser) {
 			let nextButton = document.getElementById('carousel-next-button');
 			nextButton.disabled = curPage >= nPages - 1;
@@ -29,6 +27,7 @@
 			prevButton.disabled = curPage <= 0;
 		}
 	};
+
 	const goToNextPage = () => {
 		curPage++;
 		checkDisableCarouselButtons();
@@ -38,24 +37,25 @@
 		checkDisableCarouselButtons();
 	};
 
+	// dynamically changing number of projects shown
+	const handleWindowResize = () => {
+		let container = document.getElementById('project-container');
+		if (container.clientWidth > 600) {
+			projectsPerPage = 3 * nProjectRows;
+		} else if (container.clientWidth > 350) {
+			projectsPerPage = 2 * nProjectRows;
+		} else {
+			projectsPerPage = nProjectRows;
+		}
+		if (curPage >= nPages && nPages > 0) {
+			curPage = nPages - 1;
+		}
+		checkDisableCarouselButtons();
+	};
+
 	if (browser) {
-		// dynamically changing number of projects shown
-		const handleWindowResize = () => {
-			let container = document.getElementById('project-container');
-			if (container.clientWidth > 600) {
-				projectsPerPage = 3 * nProjectRows;
-			} else if (container.clientWidth > 350) {
-				projectsPerPage = 2 * nProjectRows;
-			} else {
-				projectsPerPage = nProjectRows;
-			}
-			if (curPage >= nPages) {
-				curPage = nPages - 1;
-			}
-		};
 		window.addEventListener('resize', handleWindowResize, false);
 		window.addEventListener('load', handleWindowResize, false);
-		window.addEventListener('load', checkDisableCarouselButtons, false);
 	}
 	$: displayedProjects = allProjects.slice(
 		curPage * projectsPerPage,
