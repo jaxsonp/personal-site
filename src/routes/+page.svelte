@@ -73,40 +73,46 @@
 	);
 </script>
 
-<main class="flex justify-center">
-	<div class="grid lg:grid-cols-4 px-2 lg:w-full lg:max-w-[1280px]">
-		<section
-			class="mt-16 lg:mt-0 lg:fixed lg:top-0 lg:h-screen lg:w-[400px] flex flex-col lg:flex-row"
-		>
-			<div class="flex flex-col justify-center items-center lg:h-screen">
-				<img class="w-[160px] rounded-full border-black border-4" src={headshotPic} alt="Me pic" />
-				<div class="m-8 mb-0 lg:mb-8">
-					<p class="text-[1.5rem]">Hi, I'm</p>
-					<h1
-						class="leading-none font-bold decoration-blue decoration-8 underline underline-offset-2"
-					>
-						Jaxson<br />Pahukula
-					</h1>
-				</div>
-				<div class="text-xl text-center flex flex-col gap-2 m-4 mt-16 lg:mt-4">
-					<a href="/resume.pdf">My Resume 🗋</a>
-					<a href="mailto:jaxpahu@gmail.com">jaxpahu@gmail.com 🖂</a>
-					<a href="https://github.com/jaxsonp">Github {'>'}</a>
-					<a href="https://www.linkedin.com/in/jaxsonp/">LinkedIn {'>'}</a>
+<div class="flex flex-col items-center">
+	<main
+		class="lg:flex lg:w-full lg:max-w-[832px] xl:max-w-[1180px] px-2 mx-1 lg:ml-[20%] lg:mr-[10%] contain-layout"
+	>
+		<!-- left hand card -->
+		<section class="mt-16 lg:m-0 lg:absolute lg:left-[-100px] lg:h-full lg:w-[300px]">
+			<div class="lg:sticky lg:top-0 lg:h-screen flex justify-center items-center">
+				<div class="flex flex-col justify-center items-center rounded-2xl black-glass border-white">
+					<img
+						class="w-[160px] rounded-full border-black border-4"
+						src={headshotPic}
+						alt="Me pic"
+					/>
+					<div class="m-8 mb-0 lg:mb-8">
+						<p class="text-[1.5rem]">Hi, I'm</p>
+						<h1
+							class="leading-none font-bold decoration-blue decoration-8 underline underline-offset-2"
+						>
+							Jaxson<br />Pahukula
+						</h1>
+					</div>
+					<div class="text-xl text-center flex flex-col gap-2 m-4 mt-16 lg:mt-4">
+						<a href="/resume.pdf">My Resume 🗋</a>
+						<a href="mailto:jaxpahu@gmail.com">jaxpahu@gmail.com 🖂</a>
+						<a href="https://github.com/jaxsonp">Github {'>'}</a>
+						<a href="https://www.linkedin.com/in/jaxsonp/">LinkedIn {'>'}</a>
+					</div>
 				</div>
 			</div>
 		</section>
-
-		<div class="lg:col-span-1"><!-- spacer div  --></div>
-		<div class="lg:col-span-3 mx-4 my-8 flex flex-col gap-12">
-			<section class="black-glass w-full p-4 lg:px-12 rounded-2xl">
+		<!-- Main content -->
+		<div class="my-8 lg:pl-[200px] flex flex-col gap-12 black-glass lg:no-black-glass">
+			<section class=" w-full p-4 lg:px-12 rounded-2xl">
 				<h2 id="about-me">About Me</h2>
 				<p class="my-4">TODO put stuff here</p>
 			</section>
-			<section class="black-glass w-full p-4 lg:px-8 lg:mt-8 rounded-2xl">
-				<h2 id="featured-projects">Some Projects</h2>
+			<section class="w-full p-4 lg:px-8 lg:mt-8 rounded-2xl">
+				<h2 id="featured-projects">Featured Projects</h2>
 				<div class="mt-4 flex justify-center">
-					<div class="flex flex-col gap-8 w-full lg:max-w-[50%]">
+					<div class="flex flex-col gap-8 w-full lg:max-w-[80%]">
 						{#each featuredProjects as { title, description, thumbnailFile, links, tags }}
 							<LargeProjectCard
 								{title}
@@ -119,11 +125,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="black-glass w-2/3 p-4 lg:px-8 rounded-2xl">
+			<section class="w-full p-4 lg:px-8 rounded-2xl">
 				<h2 id="experience">My Experience</h2>
 				<p class="my-4">TODO put stuff here (I have experience i swear)</p>
 			</section>
-			<section class="black-glass w-full p-4 lg:px-8 rounded-2xl">
+			<section class="w-full p-4 lg:px-8 rounded-2xl">
 				<div class="mb-4 flex flex-col md:flex-row justify-between items-end">
 					<h2 id="all-projects">All Projects</h2>
 					<a href="/projects" class="underline text-xl">See them all {'>'}</a>
@@ -154,5 +160,5 @@
 				</div>
 			</section>
 		</div>
-	</div>
-</main>
+	</main>
+</div>
