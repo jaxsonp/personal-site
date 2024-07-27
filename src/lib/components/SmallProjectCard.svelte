@@ -14,7 +14,7 @@
 	<div class="grid">
 		{#if title == 'Personal Site'}
 			<iframe
-				class="col-start-1 row-start-1 mt-8 w-full h-36 rounded-md gradient-mask-t-0 -z-10"
+				class="col-start-1 row-start-1 mt-8 w-full h-36 rounded-lg gradient-mask-t-0 -z-10"
 				title="Inception"
 				alt={thumbnail}
 				src="/blank"

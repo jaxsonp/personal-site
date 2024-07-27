@@ -3,6 +3,7 @@
 
 	import LargeProjectCard from '$lib/components/LargeProjectCard.svelte';
 	import SmallProjectCard from '$lib/components/SmallProjectCard.svelte';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
 
 	import headshotPic from '$lib/assets/headshot.jpg';
 	import projects from '$lib/projects.json';
@@ -83,7 +84,7 @@
 				<div class="flex flex-col justify-center items-center p-2 rounded-2xl lg:black-glass">
 					<!-- Masked shadow -->
 					<div
-						class="hidden lg:block w-full h-full absolute clip-side-card-shadow shadow-transparent-white shadow-light rounded-2xl"
+						class="hidden lg:block w-full h-full absolute clip-side-card-shadow shadow-transparent-white shadow-light rounded-2xl pointer-events-none"
 					/>
 					<img
 						class="w-[160px] rounded-full border-black border-4"
@@ -93,7 +94,7 @@
 					<div class="m-8 mb-0 lg:mb-8">
 						<p class="text-[1.5rem]">Hi, I'm</p>
 						<h1
-							class="leading-none font-bold decoration-blue decoration-8 underline underline-offset-2"
+							class="leading-none m-0 font-bold decoration-blue decoration-8 underline underline-offset-2"
 						>
 							Jaxson<br />Pahukula
 						</h1>
@@ -108,15 +109,16 @@
 			</div>
 		</section>
 		<!-- Main content -->
-		<div class="my-8 lg:pl-[216px] flex flex-col gap-12 rounded-2xl black-glass">
+		<div class="my-8 lg:pl-[216px] fle x flex-col gap-12 rounded-2xl black-glass">
 			<section class=" w-full p-4 lg:px-12">
-				<h2 id="about-me">About Me</h2>
+				<SectionHeader>About Me</SectionHeader>
 				<p class="my-4">TODO put stuff here</p>
 			</section>
 			<section class="w-full p-4 lg:px-8 lg:mt-8">
-				<h2 id="featured-projects">Featured Projects</h2>
+				<SectionHeader>Projects</SectionHeader>
+				<h2 class="text-center">My Current Favorites</h2>
 				<div class="mt-4 flex justify-center">
-					<div class="flex flex-col gap-8 w-full lg:max-w-[80%]">
+					<div class="flex flex-col gap-8 w-full xl:max-w-[80%]">
 						{#each featuredProjects as { title, description, thumbnailFile, links, tags }}
 							<LargeProjectCard
 								{title}
@@ -128,41 +130,39 @@
 						{/each}
 					</div>
 				</div>
+				<br class="m-4" />
+				<!-- all projects carousel -->
+				<section class="hidden md:inline-block w-full px-4 lg:px-8">
+					<h2 class="text-center">All Projects</h2>
+					<p class="text-center text-base italic text-light-gray">Page {curPage + 1} of {nPages}</p>
+					<div class="flex pb-4 justify-center text-lg text-light-gray">
+						<button
+							id="carousel-prev-button"
+							class="px-3 disabled:line-through disabled:italic disabled:text-gray"
+							on:click={goToPrevPage}>{'<'} Prev</button
+						>
+						<button
+							id="carousel-next-button"
+							class="px-3 disabled:line-through disabled:italic disabled:text-gray"
+							on:click={goToNextPage}>Next {'>'}</button
+						>
+					</div>
+					<div id="project-container" class="grid gap-4 grid-cols-{projectsPerPage / nProjectRows}">
+						{#each displayedProjects as { title, description, thumbnailFile, links, tags }}
+							<SmallProjectCard
+								{title}
+								{description}
+								thumbnail={thumbnailModules[`/src/lib/assets/thumbnails/${thumbnailFile}`].default}
+								{links}
+								{tags}
+							/>
+						{/each}
+					</div>
+				</section>
 			</section>
 			<section class="w-full p-4 lg:px-8">
-				<h2 id="experience">My Experience</h2>
+				<SectionHeader>My Experience</SectionHeader>
 				<p class="my-4">TODO put stuff here (I have experience i swear)</p>
-			</section>
-			<!-- All projects carousel -->
-			<section class="hidden md:inline-block w-full p-4 lg:px-8">
-				<div class="mb-4 flex flex-col md:flex-row justify-between items-end">
-					<h2 id="all-projects">All Projects</h2>
-					<a href="/projects" class="underline text-xl">See them all {'>'}</a>
-				</div>
-				<p class="text-center text-base italic text-light-gray">Page {curPage + 1} of {nPages}</p>
-				<div class="flex pb-4 justify-center text-lg text-light-gray">
-					<button
-						id="carousel-prev-button"
-						class="px-3 disabled:line-through disabled:italic disabled:text-gray"
-						on:click={goToPrevPage}>{'<'} Prev</button
-					>
-					<button
-						id="carousel-next-button"
-						class="px-3 disabled:line-through disabled:italic disabled:text-gray"
-						on:click={goToNextPage}>Next {'>'}</button
-					>
-				</div>
-				<div id="project-container" class="grid gap-4 grid-cols-{projectsPerPage / nProjectRows}">
-					{#each displayedProjects as { title, description, thumbnailFile, links, tags }}
-						<SmallProjectCard
-							{title}
-							{description}
-							thumbnail={thumbnailModules[`/src/lib/assets/thumbnails/${thumbnailFile}`].default}
-							{links}
-							{tags}
-						/>
-					{/each}
-				</div>
 			</section>
 		</div>
 	</main>
