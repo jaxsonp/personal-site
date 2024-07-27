@@ -8,7 +8,7 @@ module.exports = {
 		// for the carousel dynamically updating number of cols
 		'grid-cols-2',
 		'grid-cols-3',
-		'grid-cols-42'
+		'grid-cols-4'
 	],
 	theme: {
 		colors: {
@@ -19,7 +19,7 @@ module.exports = {
 			black: '#121212',
 			glass: 'rgba(0, 0, 0, 0.33)',
 			transparent: 'rgba(0, 0, 0, 255)',
-			'transparent-white': 'rgba(255, 255, 255, 0.2)' // for box shadows
+			'transparent-white': 'rgba(255, 255, 255, 0.2)' // for shadows
 		},
 		fontFamily: {
 			mono: ['Inconsolata', 'mono']
@@ -32,8 +32,11 @@ module.exports = {
 		},
 		extend: {
 			boxShadow: {
-				light: '0 0 32px -12px rgba(255, 255, 255, 0.2)',
-				'sm-light': '0 8px 16px -4px rgba(255, 255, 255, 0.2)'
+				light: '0 6px 32px -12px rgba(255, 255, 255, 0.2)',
+				'sm-light': '0 4px 16px -4px rgba(255, 255, 255, 0.1)'
+			},
+			dropShadow: {
+				light: '0 6px 32px -12px rgba(255, 255, 255, 0.2)'
 			},
 			transitionProperty: {
 				height: 'height'

@@ -77,10 +77,14 @@
 	<main
 		class="lg:flex lg:w-full lg:max-w-[832px] xl:max-w-[1180px] px-2 mx-1 lg:ml-[20%] lg:mr-[10%] contain-layout"
 	>
-		<!-- left hand card -->
+		<!-- side card -->
 		<section class="mt-16 lg:m-0 lg:absolute lg:left-[-100px] lg:h-full lg:w-[300px]">
-			<div class="lg:sticky lg:top-0 lg:h-screen flex justify-center items-center">
+			<div class="lg:sticky lg:top-0 lg:h-screen flex justify-center items-center z-10">
 				<div class="flex flex-col justify-center items-center p-2 rounded-2xl lg:black-glass">
+					<!-- Masked shadow -->
+					<div
+						class="hidden lg:block w-full h-full absolute clip-side-card-shadow shadow-transparent-white shadow-light rounded-2xl"
+					/>
 					<img
 						class="w-[160px] rounded-full border-black border-4"
 						src={headshotPic}
@@ -163,3 +167,10 @@
 		</div>
 	</main>
 </div>
+
+<style>
+	.clip-side-card-shadow {
+		/* To clip the shadow on the left side card */
+		clip-path: xywh(132px -100px 100% 100vh);
+	}
+</style>
