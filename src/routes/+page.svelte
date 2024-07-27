@@ -79,7 +79,9 @@
 		class="lg:flex lg:w-full lg:max-w-[832px] xl:max-w-[1180px] px-2 mx-1 lg:ml-[20%] lg:mr-[10%] contain-layout"
 	>
 		<!-- side card -->
-		<section class="mt-16 lg:m-0 lg:absolute lg:left-[-100px] lg:h-full lg:w-[300px]">
+		<section
+			class="mt-16 lg:m-0 lg:absolute lg:left-[-100px] lg:h-full lg:w-[300px] lg:min-w-[300px]"
+		>
 			<div class="lg:sticky lg:top-0 lg:h-screen flex justify-center items-center z-10">
 				<div class="flex flex-col justify-center items-center p-2 rounded-2xl lg:black-glass">
 					<!-- Masked shadow -->
@@ -94,7 +96,7 @@
 					<div class="m-8 mb-0 lg:mb-8">
 						<p class="text-[1.5rem]">Hi, I'm</p>
 						<h1
-							class="leading-none m-0 font-bold decoration-blue decoration-8 underline underline-offset-2"
+							class="leading-none my-0 font-bold decoration-blue decoration-8 underline underline-offset-2"
 						>
 							Jaxson<br />Pahukula
 						</h1>
@@ -109,7 +111,7 @@
 			</div>
 		</section>
 		<!-- Main content -->
-		<div class="my-8 lg:pl-[216px] fle x flex-col gap-12 rounded-2xl black-glass">
+		<div class="my-8 lg:pl-[216px] rounded-2xl black-glass">
 			<section class=" w-full p-4 lg:px-12">
 				<SectionHeader>About Me</SectionHeader>
 				<p class="my-4">TODO put stuff here</p>

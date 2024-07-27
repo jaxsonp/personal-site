@@ -4,8 +4,8 @@
 
 @layer base {
 	* {
-		@apply text-white;
 		font-family: monospace;
+		@apply text-white font-mono;
 	}
 	*::before,
 	*::after {
